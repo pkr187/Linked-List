@@ -91,6 +91,21 @@ namespace LinkedList
                 temp.next = node;
             }
         }
+        //UC5
+        //Delete last elements in LinkedList
+        public Node Pop()
+        {
+            Node node = head;
+            if (head == null)
+            {
+                Console.WriteLine("Linked List is empty: ");
+            }
+            else
+            {
+                head = head.next;
+            }
+            return node;
+        }
         internal void Display()
         {
             Node temp = this.head;
