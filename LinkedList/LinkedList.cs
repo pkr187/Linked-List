@@ -167,6 +167,49 @@ namespace LinkedList
             node.next = temp.next;
             temp.next = node;
         }
+        //UC9
+        //Ability to delete 40 from the LinkedList
+        internal void DeleteAtParticularPosition(int position)
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("LinkedList is empty");
+                return;
+            }
+            Node temp = this.head;
+            if (position == 0)
+            {
+                this.head = temp.next;
+                return;
+            }
+            for (int i = 0; temp != null && i < position - 1; i++)
+            {
+                temp = temp.next;
+            }
+            if (temp == null || temp.next == null)
+            {
+                return;
+            }
+            Node next = temp.next.next;
+            temp.next = next;
+        }
+        internal void size()
+        {
+            Node temp = this.head;
+            int count = 0;
+            if (temp == null)
+            {
+                Console.WriteLine("Linkedlist is empty");
+                return;
+            }
+            while (temp != null)
+            {
+                Console.WriteLine(temp.data + " ");
+                temp = temp.next;
+                count++;
+            }
+            Console.WriteLine("Length of LinkedList is :" + " " + count);
+        }
         internal void Display()
         {
             Node temp = this.head;
