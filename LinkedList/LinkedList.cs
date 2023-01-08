@@ -148,6 +148,25 @@ namespace LinkedList
             }
             return 0;
         }
+        //UC8
+        //Ability to insert 40 after 30 in LinkedList
+        public void InsertNodeAfterParticularNode(int data, int dataToSearch)
+        {
+            int position = Search(dataToSearch);
+            if (position == 0)
+            {
+                Console.WriteLine("No such elements found");
+                return;
+            }
+            Node node = new Node(data);
+            Node temp = this.head;
+            for (int i = 1; i < position; i++)
+            {
+                temp = temp.next;
+            }
+            node.next = temp.next;
+            temp.next = node;
+        }
         internal void Display()
         {
             Node temp = this.head;
