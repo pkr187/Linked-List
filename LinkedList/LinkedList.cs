@@ -8,7 +8,7 @@ namespace LinkedList
 {
     public class LinkedList
     {
-        internal  Node head;
+        internal Node head;
         //UC1
         //Add method to insert into linkedlist
         internal void Add(int data)
@@ -30,6 +30,21 @@ namespace LinkedList
             Console.WriteLine("{0} inserted into linked list", node.data);
 
         }
+        //UC2
+        internal void AddInReverseOrder(int data)
+        {
+            Node newNode = new Node(data);
+            if (this.head == null)
+            {
+                this.head = newNode;
+            }
+            else
+            {
+                Node temp = this.head;//70
+                head = newNode;//30
+                head.next = temp;//30->70
+            }
+        }
         internal void Display()
         {
             Node temp = this.head;
@@ -47,5 +62,3 @@ namespace LinkedList
 
     }
 }
-    
-
