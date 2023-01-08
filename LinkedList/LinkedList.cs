@@ -210,6 +210,30 @@ namespace LinkedList
             }
             Console.WriteLine("Length of LinkedList is :" + " " + count);
         }
+        //UC10
+        //create Ordered Linked List in ascending order of data entered
+        public void AscendingOrderSort(int data)
+        {
+            Node node = new Node(data);
+            Node temp;
+            if (head == null || head.data > node.data)
+            {
+                node.next = head;
+                head = node;
+            }
+            else
+            {
+                temp = head;
+                while (temp.next != null && temp.next.data < node.data)
+                {
+                    temp = temp.next;
+                    node.next = temp.next;
+                }
+                temp.next = node;
+            }
+            Console.WriteLine("Data inserted " + node.data);
+        }
+
         internal void Display()
         {
             Node temp = this.head;
