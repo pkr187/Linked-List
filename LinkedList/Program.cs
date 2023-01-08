@@ -8,7 +8,7 @@
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Select Programs\n 1.Create LinkedList\n 2.Add Elements in Reverse Order\n 3.Append the elements");
+                Console.WriteLine("Select Programs\n 1.Create LinkedList\n 2.Add Elements in Reverse Order\n 3.Append the elements\n 4.Insert Elements in LinkedList");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -28,6 +28,12 @@
                         list.Append(56);
                         list.Append(30);
                         list.Append(70);
+                        list.Display();
+                        break;
+                    case 4:
+                        list.AddInReverseOrder(70);
+                        list.InsertAtGivenPosition(1, 30);
+                        list.AddInReverseOrder(56);
                         list.Display();
                         break;
                 }
