@@ -92,7 +92,7 @@ namespace LinkedList
             }
         }
         //UC5
-        //Delete last elements in LinkedList
+        //Delete first elements in LinkedList
         public Node Pop()
         {
             Node node = head;
@@ -105,6 +105,27 @@ namespace LinkedList
                 head = head.next;
             }
             return node;
+        }
+        //UC6
+        //Delete last elements in LinkedList
+        public Node PopLast()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("Linked List is empty");
+                return null;
+            }
+            else
+            {
+                Node n = head;
+                while (n.next.next != null)
+                {
+                    n = n.next;
+                }
+                Node removeNode = n.next;
+                n.next = null;
+                return removeNode;
+            }
         }
         internal void Display()
         {
