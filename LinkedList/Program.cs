@@ -11,7 +11,7 @@
             while (flag)
             {
                 Console.WriteLine("Select Programs\n 1.Create LinkedList\n 2.Add Elements in Reverse Order\n 3.Append the elements\n 4.Insert Elements in LinkedList\n 5.Delete the Elements in LinkedList\n 6.Delete Last Elements in LinkedList\n 7.Search node on LinkedList\n 8.Insert 40 Elements on LinkedList\n 9.Delete Elemens" +
-                    "ts on LinkedList\n 10.Arrange Elements in AscendingOrder\n 11.Create Stack\n 12.Peek and Pop from Stack\n 13.Create a Queue");
+                    "ts on LinkedList\n 10.Arrange Elements in AscendingOrder\n 11.Create Stack\n 12.Peek and Pop from Stack\n 13.Create a Queue\n 14.Dequeue from Beginning");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -90,6 +90,11 @@
                         queue.Enqueue(70);
                         queue.Display();
                         break;
+                    case 14:
+                        queue.Dequeue();
+                        queue.Display();
+                        break;
+
                 }
             }
         }

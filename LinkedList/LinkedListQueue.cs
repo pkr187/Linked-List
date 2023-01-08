@@ -31,6 +31,24 @@ namespace LinkedList
             this.top = node;
             Console.WriteLine("{0} pushed to queue", value);
         }
+        //UC2
+        //Dequeue operation
+        internal void Dequeue()
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("queue is empty,Deletion is not possible");
+                return;
+            }
+            else
+            {
+                while (this.head != null)
+                {
+                    Console.WriteLine("valye Dequeue is {0}", this.head.data);
+                    this.head = this.head.next;
+                }
+            }
+        }
         internal void Display()
         {
             Node temp = this.top;
@@ -42,5 +60,3 @@ namespace LinkedList
         }
     }
 }
-    
-
